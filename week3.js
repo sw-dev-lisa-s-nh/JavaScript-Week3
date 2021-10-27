@@ -101,12 +101,19 @@ console.log("Result from call to function willBuyDrink (true, 20.00):  " + willB
 console.log("Result from call to function willBuyDrink (false, 20.00):  " + willBuyDrink (false, 20.00));
 console.log("Result from call to function willBuyDrink (true, 10.00):  " + willBuyDrink (true, 10.00));
 
-// Call to 13,  Write Own Function Here!!!!!
-
+// Call to 13,  Write Own Function Here!!!!! -- reverseString()
 console.log("Results from reverseString: " + reverseString("Hello"));
 console.log("Results from my reverseString: " + reverseString("Goodbye"));
 console.log("Results from my reverseString: " + reverseString("madam Im adam"));
 console.log("Results from my reverseString: " + reverseString("tacocat"));
+
+// Call to 13, Write Own Function Here!!!!! -- calcuatedDiscountedPrice()
+
+console.log("Original Price is: 4000.  New Price: " + calculateDiscountedPrice(4000));
+console.log("Original Price is: 3000.  New Price: " + calculateDiscountedPrice(3000));
+console.log("Original Price is: 2000.  New Price: " + calculateDiscountedPrice(2000));
+console.log("Original Price is: 1000.  New Price: " + calculateDiscountedPrice(1000));
+
 
 
 
@@ -176,6 +183,8 @@ function willBuyDrink (isHotOutside, moneyInPocket) {
 //      In comments, write what the function does and why you created it.
 
 //
+// reverseString(name)
+//
 // I wrote this function to reverse a string.  I created it to have fun!
 // in addition, I love palindromes!
 //
@@ -185,4 +194,25 @@ function reverseString(name) {
         reverse += name[index];
     }
     return reverse;
+}
+
+//
+// calculateDiscountedPrice(originalPrice)
+//
+// Calculate the discount for a particular price.
+//  IF PRICE > $4000 --> the discount is 20%
+//           > $3000 --> the discount is 15%
+//           > $2000 --> the discount is 10%
+//           ELSE discount is 5%.
+
+function calculateDiscountedPrice(price) {
+    if (price > 4000) {
+        return price - (price * .20);
+    } else if (price > 3000) {
+        return price - (price * .15);
+    } else if (price > 2000) {
+        return price - (price * .10);
+    } else {
+        return price - (price * .05);
+    }
 }
