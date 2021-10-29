@@ -1,5 +1,6 @@
 // 1.  Create an array called ages that contains the following 
 //          values: 3, 9, 23, 64, 2, 8, 28, 93.
+console.log("Question #1:");
 const ages = new Array(3, 9, 23, 64, 2, 8, 28, 93);
 console.log(ages);
 
@@ -8,26 +9,31 @@ console.log(ages);
 //              array (do not use numbers to reference the last element, 
 //              find it programmatically, ages[7] – ages[0] is not allowed). 
 //              Print the result to the console.
+console.log("Question #1a:");
 console.log("Difference between last & first elements of ages array: " + (ages[ages.length-1]-ages[0]));
 
 //      b.  Add a new age to your array and repeat the step above to 
 //              ensure it is dynamic (works for arrays of different lengths).
-const newages = new Array(3, 9, 23, 64, 2, 8, 28, 93,103);
-console.log(newages);
+console.log("Question #1b:");
+ages.push(103);
+console.log(ages);
 
 
 //      c.  Use a loop to iterate through the array and calculate the 
 //              average age. Print the result to the console.
-console.log("Difference between last & first elements of newages array: " + (newages[newages.length-1]-newages[0]));
+console.log("Question #1c:")
+console.log("Difference between last & first elements of new ages array: " + (ages[ages.length-1]-ages[0]));
 
 // 2.  Create an array called names that contains the following 
 //          values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
+console.log("Question #2:")
 const names = new Array("Sam", "Tommy", "Tim", "Sally", "Buck", "Bob");
 console.log(names);
 
 //      a.  Use a loop to iterate through the array 
 //          and calculate the average number of letters per name. 
 //          Print the result to the console.
+console.log("Question #2a:");
 var average = 0;
 var sum = 0;
 
@@ -41,6 +47,7 @@ console.log("The average number of letters per name is: " + result);
 //      b.  Use a loop to iterate through the array again 
 //          and concatenate all the names together, separated by spaces, 
 //          and print the result to the console.
+console.log("Question #2b:");
 var newString = "";
 for (var index = 0; index < names.length; index++) {
     newString += names[index] + " ";
@@ -49,24 +56,27 @@ console.log("The concatenated string of names is: " + newString);
 
 
 // 3.  How do you access the last element of any array?
+console.log("Question #3:");
 console.log("The last element of names is: " + names[names.length-1]);
 
 // 4.  How do you access the first element of any array?
+console.log("Question #4:");
 console.log("The first element of names is: " + names[0]);
 
 // 5.  Create a new array called nameLengths. 
 //      Write a loop to iterate over the previously created names array 
 //      and add the length of each name to the nameLengths array.
-
+console.log("Question 5:");
 const nameLengths = [];
 for (var index = 0; index < names.length; index++) {
-    nameLengths[index] = names[index].length;
+    nameLengths.push(names[index].length);
 }
 console.log("The nameLengths array: " + nameLengths);
 
 // 6.  Write a loop to iterate over the nameLengths array 
 //      and calculate the sum of all the elements in the array. 
 //      Print the result to the console.
+console.log("Question #6:");
 var sum = 0;
 for (num of nameLengths) {
     sum += num;
@@ -74,41 +84,51 @@ for (num of nameLengths) {
 console.log("The sum of all elements in nameLengths is: " + sum);
 
 // Call to 7.
+console.log("Question #7:");
 console.log("Result from call to function numConcat(Hello, 3): " + numConcat("Hello", 3));
 console.log("Result from call to function numConcat(Goodbye, 5): " + numConcat("Goodbye", 5));
 console.log("Result from call to function numConcat(Adios, 8): " + numConcat("Adios", 8));
 
 // Call to 8.  createFullName(p1,p2)
+console.log("Question #8:");
 console.log("Result from call to function createFullName:  " + createFullName("Mickey", "Mouse"));
 
 // Call to 9.  sumAnArray(arrayName)
-
+console.log("Question #9:");
 console.log("Result from call to function sumAnArray(ages):  " + sumAnArray(ages));
-console.log("Result from call to function sumAnArray(newages):  " + sumAnArray(newages));
+ages.push(20);
+console.log("Result from call to function sumAnArray(ages):  " + sumAnArray(ages));
 
 // Call to 10, returnAverageOfNumbers(arrayName)
-
+console.log("Question #10:");
 console.log("Result from call to function returnAverageOfNumbers(ages): " + returnAverageOfNumbers(ages));
-console.log("Result from call to function returnAverageOfNumbers(newages): " + returnAverageOfNumbers(newages));
+ages.push(40);
+console.log("Result from call to function returnAverageOfNumbers(ages): " + returnAverageOfNumbers(ages));
 
 // Call to 11, isGreaterThan(newages,ages)
-
+console.log("Question #11:");
+const newages = new Array(3, 9, 23, 64, 2, 8, 28, 93,200,30,5);
+console.log("newages: " + newages);
+console.log("returnAverageOfNumbers(newages): " + returnAverageOfNumbers(newages));
+console.log("ages: " + ages);
+console.log("returnAverageOfNumbers(ages): " + returnAverageOfNumbers(ages));
 console.log("Result of isGreaterThan! Is the average of numbers in newages greater than in ages: " + isGreaterThan(newages,ages));
 
 // Call to 12, willBuyDrink (isHotOutside, moneyInPocket)
-
+console.log("Question #12:");
 console.log("Result from call to function willBuyDrink (true, 20.00):  " + willBuyDrink (true, 20.00));
 console.log("Result from call to function willBuyDrink (false, 20.00):  " + willBuyDrink (false, 20.00));
 console.log("Result from call to function willBuyDrink (true, 10.00):  " + willBuyDrink (true, 10.00));
 
 // Call to 13,  Write Own Function Here!!!!! -- reverseString()
+console.log("Question #13:  reverseString()");
 console.log("Results from reverseString: " + reverseString("Hello"));
 console.log("Results from my reverseString: " + reverseString("Goodbye"));
 console.log("Results from my reverseString: " + reverseString("madam Im adam"));
 console.log("Results from my reverseString: " + reverseString("tacocat"));
 
 // Call to 13, Write Own Function Here!!!!! -- calcuatedDiscountedPrice()
-
+console.log("Question #13: calculateDiscountedPrice()");
 console.log("Original Price is: 4000.  New Price: " + calculateDiscountedPrice(4000));
 console.log("Original Price is: 3000.  New Price: " + calculateDiscountedPrice(3000));
 console.log("Original Price is: 2000.  New Price: " + calculateDiscountedPrice(2000));
