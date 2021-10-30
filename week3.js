@@ -95,9 +95,9 @@ console.log("Result from call to function createFullName:  " + createFullName("M
 
 // Call to 9.  sumAnArray(arrayName)
 console.log("Question #9:");
-console.log("Result from call to function sumAnArray(ages):  " + sumAnArray(ages));
+console.log("Result from call to function sumAnArrayGreaterThan100(ages):  " + sumAnArrayGreaterThan100(ages));
 ages.push(20);
-console.log("Result from call to function sumAnArray(ages):  " + sumAnArray(ages));
+console.log("Result from call to function sumAnArrayGreaterThan100(ages):  " + sumAnArrayGreaterThan100(ages));
 
 // Call to 10, returnAverageOfNumbers(arrayName)
 console.log("Question #10:");
@@ -161,12 +161,12 @@ function createFullName(firstName, lastName) {
 // 9.  Write a function that takes an array of numbers 
 //      and returns true if the sum of all the numbers in the array is greater than 100.
 
-function sumAnArray (newArray) {
+function sumAnArrayGreaterThan100 (newArray) {
     var sum = 0;
     for (number of newArray) {
         sum += number;
     } 
-    return sum;  
+    return (sum > 100);  
 }
 
 // 10.  Write a function that takes an array of numbers 
